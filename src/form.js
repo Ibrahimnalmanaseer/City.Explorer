@@ -10,9 +10,9 @@ class Entry extends React.Component{
 
         event.preventDefault();
         
-                
-        const key='pk.c38cb90efb1f614a4d476396e3396b57';
-        let request = await axios.get(`https://eu1.locationiq.com/v1/search?key=${key}&q=${event.target.city.value} &format=json`); 
+        const Global='pk.e6f569abb6089f922ac76a14ac4bc5e4'
+       
+        let request = await axios.get(`https://eu1.locationiq.com/v1/search?key=${Global}&q=${event.target.city.value}&format=json`); 
         this.props.getcity(event.target.city.value,request.data[0].lat,request.data[0].lon);
         console.log(request)
         
