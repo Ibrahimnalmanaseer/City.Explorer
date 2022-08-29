@@ -1,6 +1,6 @@
 import React from "react";
 import Entry from './form.js';
-// import Data from "./Data.js";
+import Weather from "./weather.js";
 
 const GLOBAL='pk.e6f569abb6089f922ac76a14ac4bc5e4'
 
@@ -17,18 +17,22 @@ class Main extends React.Component{
       city:'',
       lat:'',
       lon:'',
+      Discription:'',
+      Date:'',
       
     
     }
   }
 
    
-  getCity=(cityname,latitude,longitude)=>{
+  getCity=(cityname,latitude,longitude,discription,date)=>{
 
     this.setState({
       city:cityname,
       lat:latitude,
       lon:longitude,
+      Discription:discription,
+      Date:date,
       
 
 
@@ -42,12 +46,12 @@ class Main extends React.Component{
       
       return(  <div>
 
-
+            
            <Entry getcity={this.getCity} />
-           <h1>latitude: {this.state.lat}</h1>
-           <h1>longitude: {this.state.lon}</h1>
-            <img src={` https://maps.locationiq.com/v3/staticmap?key=${GLOBAL}&center=${this.state.lat},${this.state.lon}`} alt='City Map'/>
-           
+           <h3>latitude: {this.state.lat}</h3>
+           <h3>longitude: {this.state.lon}</h3>
+           <img src={`https://maps.locationiq.com/v3/staticmap?key=${GLOBAL}&center=${this.state.lat},${this.state.lon}`} alt='City Map'/>
+           <Weather weatherdis={this.state.Discription}  weatherdate={this.state.Date}  />
            
         </div>
 
