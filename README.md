@@ -13,16 +13,17 @@ create (main.js , form.js , data.js) , firstly get the city name from from.js to
 
 ## Architecture
 
-![city_expor](https://user-images.githubusercontent.com/62019258/187094783-8f935ed2-ac1d-4d1e-a8fe-4f20448a4560.PNG)
+
+![flow](https://user-images.githubusercontent.com/62019258/187322160-9623e1b0-9fea-4f21-a424-a7469350fbff.PNG)
 
 
 
 ## Change Log
 
 
-<p>08-28-2022 3:00pm - website now deployed on netlify .</p>
+<p>08-28-2022 1:00pm - website now deployed on netlify .</p>
 <p>08-28-2022 4:00pm - display city search box on main page</p>
-<p>08-28-2022 11:00pm - all features works</p>
+<p>08-28-2022 11:00pm - build backend feature</p>
 
 
 ## Credit and Collaborations
